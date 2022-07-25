@@ -2,7 +2,7 @@
 
 Intro
 =====
-In math, a polynomial of variable X is an Expression from the form: $a_{1}, a_{2}*x^2 + ... + a_{n}*x^n$ when $a_{1}, a_{2} + ..., a_{n}$ are constant .
+In math, a polynomial of variable X is an Expression from the form: $a_{1} + a_{2}*x^2 + ... + a_{n}*x^n$ when $a_{1}, a_{2} + ..., a_{n}$ are constant .
 
 The literals $a_{k}x^k$ are called **monomos**.
 In this monom the power is k and the coefficient is $a_{k}$.
