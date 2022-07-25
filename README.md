@@ -69,9 +69,18 @@ The class will contain the following methods:
     - `derivative` A method that returns a new polynomial containing a list of which each items is the derivative of a monomial of the list in the original polynomial
     - `integral` A method will return a new polynomial containing a list in which each items is the integral of a monomial of the list in the original polynomial
     
- In addition, All six comparison operations are supported 
-  - a polynomial will be considered greater than another polynomial if in the highest coefficient different between the two polynomials it has a higher coefficient
-  - Equivalent polynomials are polynomials that contain exactly the same values in all monomials
+ In addition, all six comparison operations are supported: `=`,`≠`, `<`, `>`, `≤`, `≥`.
+ 
+## Part C - BinTreeNode
+
+The class will contain the following field:
+  - head - head of a tree, in an empty tree contain None or points to the first Node that was inserted to the tree.
+  The nodes will be without key, the comparison will be according to the different comparison operations for each polynomial.
+  
+The class will contain the following methods:
+  - `insert` A method that gets an sorted polynomial. The insertion of a term containing a polynomia less than or equal to a term containing an existing polynomial will be in the left child of the term of the existing polynomial (greather polynomial will be in the right child)
+  - `in_order` A method that return the polynomial's list in the tree.
+  - `__add__` A opperation that gets an two binary trees and returns a new binary tree containing both sides of the trees.
 
 
 
