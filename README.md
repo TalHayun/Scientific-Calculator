@@ -7,6 +7,7 @@ The literals $a_{k}x^k$ are called **monomos**.
 In this monom the power is k and the coefficient is $a_{k}$.
 
 # Contents
+==========
 
 <!--ts-->
 - [Part A - Monom](#Part-A-Monom)
@@ -16,6 +17,7 @@ In this monom the power is k and the coefficient is $a_{k}$.
 
 
 ## Part A - Monom
+=================
 
 The monom class will be a class containing the following fields:
   - power - the monom's power that represented by natural number
@@ -40,6 +42,7 @@ The class will contain the following methods:
   - `integral` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
   
 ## Part B - Polynomial
+======================
 
 The polynomial class will be a class that describe a polynomial in a linked list of monomials as described in the following figure:
 
@@ -75,6 +78,7 @@ The class will contain the following methods:
  In addition, all six comparison operations are supported: `=`,`≠`, `<`, `>`, `≤`, `≥`.
  
 ## Part C - BinTreeNode
+=======================
 
 The class will contain the following field:
   - head - head of a tree, in an empty tree contain None or points to the first Node that was inserted to the tree.
