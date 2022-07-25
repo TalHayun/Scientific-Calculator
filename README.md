@@ -20,7 +20,7 @@ The monom class will be a class containing the following fields:
   - next - point to the next monomial link
 
 The class will contain the following methods:
-  - A constructor that accepts as parameters the power and the coefficient (default of the coefficient is 1)
+  - A constructor that gets as parameters the power and the coefficient (default of the coefficient is 1)
   - `__repr__` opperation which returns a string representing the monomial by math format (eg: monom that contain power 6 and coefficient 3 will returned - $3x^6$)
     
     Important Rules: 
@@ -32,9 +32,9 @@ The class will contain the following methods:
     - A cofficient equal to 0 will be printed 0
     - A negative cofficient will be printed with parenthesis
     
-  - `derivative` method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied ((a*$x^{n}$)' = n*$ax^{n-1}$)
+  - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied ((a*$x^{n}$)' = n*$ax^{n-1}$)
   
-  - `integral` method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
+  - `integral` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
   
 ## Part B - Polynomial
 
@@ -44,6 +44,25 @@ The polynomial class will be a class that describe a polynomial in a linked list
 
 The monom class will be a class containing the following field:
   - head - head of a linked list of links, the list will be sorted by powers in descending order
+
+The class will contain the following methods:
+  - `__init__` Gets as a parameter a list containing tuples of two numeric members each. Within the tuple, the first item is the power and the second is the coefficient of the monomial
+    
+    Incorrect input: 
+    - The type's parameter isn't a list
+    - At least one of the elements of the list is not of tuple type
+    - At least one of the elements of the list is not of size 2
+    - The tuple's items are not numerical
+    
+    Each incorrect input will be raised a valueError with a caption: `invalid polynomic initiation`.
+    An empty list is considered normal, a monomial with a coefficient of 0 will not be added to the linked list of the monomials.
+    
+  - `__repr__` An opperation which returns a string representing the polynomial
+  - `rank` method that does not receive parameters in the call. This method returns the highest power of the polynomial (for a polynomial without monomials the power will be 0)
+  - `calculate_value` An operation that receives an X numeric value and returns the numerical value obtained from putting in a polynomial
+
+
+
 
 
 
