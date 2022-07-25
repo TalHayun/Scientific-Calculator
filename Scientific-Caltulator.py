@@ -1,6 +1,3 @@
-import copy
-
-
 class Monom:
     def __init__(self, power, coef=1):
         self.power = power
