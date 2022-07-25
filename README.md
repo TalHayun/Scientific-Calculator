@@ -1,18 +1,19 @@
 # Scientific-Calculator
 
-## Intro
+Intro
+=====
 In math, a polynomial of variable X is an Expression from the form: $a_{1} + a_{2}*x^2 + ... + a_{n}*x^n$ when $a_{1}, a_{2} + ..., a_{n}$ are constant .
 
 The literals $a_{k}x^k$ are called **monomos**.
 In this monom the power is k and the coefficient is $a_{k}$.
 
-# Contents
+Contents
 ==========
 
 <!--ts-->
-- [Part A - Monom](#Part-A-Monom)
-- [Part B - Polynomial](#Part-B-Polynomial)
-- [Part C - BinTreeNode](#Part-C-BinTreeNode)
+- [Part A - Monom](#part-a-monom)
+- [Part B - Polynomial](#part-b-polynomial)
+- [Part C - BinTreeNode](#part-c-binTreeNode)
 <!--te-->
 
 
@@ -88,9 +89,3 @@ The class will contain the following methods:
   - `insert` A method that gets an sorted polynomial. The insertion of a term containing a polynomia less than or equal to a term containing an existing polynomial will be in the left child of the term of the existing polynomial (greather polynomial will be in the right child)
   - `in_order` A method that return the polynomial's list in the tree.
   - `__add__` A opperation that gets an two binary trees and returns a new binary tree containing both sides of the trees.
-
-
-
-
-
-
