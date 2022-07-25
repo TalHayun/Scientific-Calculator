@@ -8,9 +8,12 @@ In this monom the power is k and the coefficient is $a_{k}$.
 
 # Contents
 
-- [Part A - Monom](## Part-A-Monom)
+<!--ts-->
+- [Part A - Monom](#Part-A-Monom)
 - [Part B - Polynomial](#Part-B-Polynomial)
 - [Part C - BinTreeNode](#Part-C-BinTreeNode)
+<!--te-->
+
 
 ## Part A - Monom
 
