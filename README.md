@@ -7,9 +7,10 @@ The literals $a_{k}x^k$ are called **monomos**.
 In this monom the power is k and the coefficient is $a_{k}$.
 
 # Contents
-  - [Part A - Monom](#Part-A-Monom)
-  - [Part B - Polynomial](#Part-B-Polynomial)
-  - [Part C - BinTreeNode](#Part-C-BinTreeNode)
+
+- [Part A - Monom](#part-a-Monom)
+- [Part B - Polynomial](#Part-B-Polynomial)
+- [Part C - BinTreeNode](#Part-C-BinTreeNode)
 
 ## Part A - Monom
 
@@ -31,3 +32,8 @@ The class will contain the following methods:
     - A cofficient equal to 0 will be printed 0
     - A negative cofficient will be printed with parenthesis
     
+  - `derivative` method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied ((a*$x^{n}$)' = n*$ax^{n-1}$)
+  
+  - `integral` method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
+  
+  
