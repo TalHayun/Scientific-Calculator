@@ -60,6 +60,18 @@ The class will contain the following methods:
   - `__repr__` An opperation which returns a string representing the polynomial
   - `rank` method that does not receive parameters in the call. This method returns the highest power of the polynomial (for a polynomial without monomials the power will be 0)
   - `calculate_value` An operation that receives an X numeric value and returns the numerical value obtained from putting in a polynomial
+  - `__neg__` A method that returns a new polynomial identical to the polynomial on which the operation was applied except for the sign of the coefficients. The coefficients' sign will be opposite to the polynomial on which the operation was applied
+  - `__sub__` A method that returns a new polynomial that containing the polynomial subtraction operation received as a parameter in the polynomial on which the operation was applied
+  - `__add__` A method that returns a new polynomial that containing the polynomial addition operation received as a parameter in the polynomial on which the operation was applied
+  - `__mul__` An opperation that gets a scalar or polynomial, the multiplication operation is defined as:
+    -  multiplication polynomial in a scalar - returns a new polynomial in which all the coefficients are the coefficients of the original polynomial multiplied by the scalar
+    -  multiplication polynomial in a polynomial - returns a new polynomial which is an addition multiplying each monomial from one of the polynomials in the other polynomial
+    - `derivative` A method that returns a new polynomial containing a list of which each items is the derivative of a monomial of the list in the original polynomial
+    - `integral` A method will return a new polynomial containing a list in which each items is the integral of a monomial of the list in the original polynomial
+    
+ In addition, All six comparison operations are supported 
+  - a polynomial will be considered greater than another polynomial if in the highest coefficient different between the two polynomials it has a higher coefficient
+  - Equivalent polynomials are polynomials that contain exactly the same values in all monomials
 
 
 
