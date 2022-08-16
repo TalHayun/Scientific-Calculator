@@ -29,18 +29,18 @@ The class will contain the following methods:
   - A constructor that gets as parameters the power and the coefficient (default of the coefficient is 1)
   - `__repr__` opperation which returns a string representing the monomial by math format (eg: monom that contain power 6 and coefficient 3 will returned - $3x^6$)
     
-    Important Rules: 
-    - A power equal to 1 will not be printed ($x^1$ → x)
-    - A power equal to 0 will not be printed
-    - A power equal to 1 will not be printed ($1*x$ → x)
-    - A coefficient that the value after the point is 0, will be printed as an integer
-    - A coefficient that the value after the point is not 0, will be printed as round 2 digits after the point
-    - A cofficient equal to 0 will be printed 0
-    - A negative cofficient will be printed with parenthesis
-    
   - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied ((a*$x^{n}$)' = n*$ax^{n-1}$)
   
   - `integral` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
+  
+Important Rules: 
+  - A power equal to 1 will not be printed $(x^1 → x).$
+  - A power equal to 0 will not be printed
+  - A power equal to 1 will not be printed $(1*x → x).$
+  - A coefficient that the value after the point is 0, will be printed as an integer
+  - A coefficient that the value after the point is not 0, will be printed as round 2 digits after the point
+  - A cofficient equal to 0 will be printed 0
+  - A negative cofficient will be printed with parenthesis
   
 Polynomial
 ==========
