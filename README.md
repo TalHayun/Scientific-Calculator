@@ -6,6 +6,7 @@ In math, a polynomial of variable X is an Expression from the form: $a_{1} + a_{
 
 The literals $a_{k}x^k$ are called **monomos**.
 In this monom the power is k and the coefficient is $a_{k}$.
+In this project I will write code that implements different mathematical calculations on polynomials.
 
 Contents
 ==========
