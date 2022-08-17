@@ -1,29 +1,123 @@
-# SYNOPSIS
+# TEST-1
 
 ```raku
-    use v6.d;
-    use Test;
-    use Test::Output;
-
-    my &test-code = sub {
-        say 42;
-        note 'warning!';
-        say "After warning";
-    };
-
-    # Test code's output using exact match ('is')
-    output-is   &test-code, "42\nwarning!\nAfter warning\n", 'testing output';
-    stdout-is   &test-code, "42\nAfter warning\n",  'testing stdout';
-    stderr-is   &test-code, "warning!\n", 'testing stderr';
-
-    # Test code's output using regex ('like')
-    output-like &test-code, /42.+warning.+After/, 'testing output (regex)';
-    stdout-like &test-code, /42/, 'testing stdout (regex)';
-    stderr-like &test-code, /^ "warning!\n" $/, 'testing stderr (regex)';
-
-    # Just capture code's output and do whatever you want with it
-    is output-from( &test-code ), "42\nwarning!\nAfter warning\n";
-    is stdout-from( &test-code ), "42\nAfter warning\n";
-    is stderr-from( &test-code ), "warning!\n";
-
+p1 = Polynomial([(1, 2), (2, 1), (5, 6), (6, 5), (1, 2), (2, 1)])
+p2 = Polynomial([])
+p3 = Polynomial([(8, 0), (3, -5), (3, 5), (0, 18)])
+print('p1-p3:')
+print(p1)
+print(p2)
+print(p3)
 ```
+
+# TEST-2
+
+```raku
+print(p1, ' rank:', str(p1.rank()), )
+print(p2, ' rank:', str(p2.rank()))
+print(p3, ' rank:', str(p3.rank()))
+print(p1, ' value(x=0):', str(p1.calculate_value(0)))
+print(p1, ' value(x=1):', str(p1.calculate_value(1)))
+print(p1, ' value(x=2):', str(p1.calculate_value(2)))
+```
+
+# TEST-3
+
+```raku
+p4 = Polynomial([(1, 1), (2, 2), (3, 3)])
+p5 = Polynomial([(1, 4), (2, 5), (3, 6)])
+p6 = Polynomial([(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)])
+p7 = Polynomial([(1, -1), (2, -2), (3, 3), (4, -4), (5, -5), (6, -6)])
+print('p4-p7(v1)')
+print('p4:', p4)
+print('p5:', p5)
+print('p6:', p6)
+print('p7:', p7)
+print(p6, '+', p7, '=', (p6+p7))
+print(p4, '+', p5, '=', (p4+p5))
+print('-(', p6, ')=', -p6)
+print(p6, '-', p7, '=', (p6-p7))
+```
+
+
+# TEST-4
+
+```raku
+print('p4-p5(v2)')
+print('p4:', p4)
+print('p5:', p5)
+print(p4, '*', p5, '=', (p4*p5))
+print(p4, '*', 5, '=', (p4*5))
+print(5, '*', p4, '=', (5*p4))
+```
+
+# TEST-5
+
+```raku
+print('p4-p5(v3)')
+print('(', p4, ")'=", p4.derivative())
+print('(', p5, ")'=", p5.derivative())
+print('integral(', p4, ")=", p4.integral())
+print('integral(', p5, ")=", p5.integral())
+print('integral(', p5, ")-18=", p5.integral(-18))
+print('integral((', p4, ")')=", p4.derivative().integral())
+```
+
+# TEST-6
+
+```raku
+print('p8-p9')
+p8 = Polynomial([(1, 4), (2, 5), (3, 6)])
+p9 = Polynomial([(1, 4), (2, 5), (3, 6)])
+p10 = Polynomial([(1, 4.1), (2, 5), (3, 6)])
+p11 = Polynomial([(4, 5)])
+print(p8, '==', p9, ':', str(p8 == p9))
+print(p8, '<=', p9, ':', str(p8 <= p9))
+print(p8, '>=', p9, ':', str(p8 >= p9))
+print(p8, '<', p9, ':', str(p8 < p9))
+print(p8, '>', p9, ':', str(p8 > p9))
+print(p8, '!=', p9, ':', str(p8 != p9))
+print('p9-p10')
+print(p9, '==', p10, ':', str(p9 == p10))
+print(p9, '<=', p10, ':', str(p9 <= p10))
+print(p9, '>=', p10, ':', str(p9 >= p10))
+print(p9, '<', p10, ':', str(p9 < p10))
+print(p9, '>', p10, ':', str(p9 > p10))
+print(p9, '!=', p10, ':', str(p9 != p10))
+print('p9-p11')
+print(p9, '==', p11, ':', str(p9 == p11))
+print(p9, '<=', p11, ':', str(p9 <= p11))
+print(p9, '>=', p11, ':', str(p9 >= p11))
+print(p9, '<', p11, ':', str(p9 < p11))
+print(p9, '>', p11, ':', str(p9 > p11))
+print(p9, '!=', p11, ':', str(p9 != p11))
+```
+
+# TEST-7
+
+```raku
+print('t1')
+t1 = PolynomialBST()
+t1.insert(p1)
+t1.insert(p2)
+t1.insert(p3)
+t1.insert(p4)
+t1.insert(p5)
+print(t1.in_order())
+print('t2')
+t2 = PolynomialBST()
+print(t2.in_order())
+t2.insert(p6)
+t2.insert(p7)
+t2.insert(p8)
+t2.insert(p9)
+t2.insert(p10)
+t2.insert(p11)
+print(t2.in_order())
+print('t3')
+t3 = t1 + t2
+print(t3.in_order())
+```
+
+
+
