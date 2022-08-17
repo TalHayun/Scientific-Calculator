@@ -29,7 +29,7 @@ The class will contain the following methods:
   - A constructor that gets as parameters the power and the coefficient (default of the coefficient is 1)
   - `__repr__` opperation which returns a string representing the monomial by math format (eg: monom that contain power 6 and coefficient 3 will returned - $3x^6$)
     
-  - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied ((a*$x^{n}$)' = n*$ax^{n-1}$)
+  - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied.
   
   - `integral` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
   
