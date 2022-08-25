@@ -2,9 +2,8 @@
 
 Intro
 =====
-In math, a polynomial of variable X is an Expression from the form: $a_{1} + a_{2}*x^2 + ... + a_{n}*x^n$ when $a_{1}, a_{2},  ..., a_{n}$ are constants .
-
-The literals $a_{k}x^k$ are called **monomos**.
+In math, a polynomial of variable X is an Expression from the form: $a_{1} + a_{2}*x^2 + ... + a_{n}*x^n$ when $a_{1}, a_{2},  ..., a_{n}$ are constants.<br/>
+The literals $a_{k}x^k$ are called **monomos**.<br/>
 In this monom the power is k and the coefficient is $a_{k}$.
 
 In this project I will show a code that implements different mathematical calculations on polynomials.
@@ -28,11 +27,9 @@ The monom class will be a class containing the following fields:
   - next - point to the next monomial link
 
 The class will contain the following methods:
-  - A constructor that gets as parameters the power and the coefficient (default of the coefficient is 1)
-  - `__repr__` opperation which returns a string representing the monomial by math format (eg: monom that contain power 6 and coefficient 3 will returned - $3x^6$)
-    
-  - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied.
-  
+  - A constructor that gets as parameters the power and the coefficient (default of the coefficient is 1)  
+  - `__repr__` opperation which returns a string representing the monomial by math format (eg: monom that contain power 6 and coefficient 3 will returned- $3x^6.$)     
+  - `derivative` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the derived value of the monomial on which the function was applied. 
   - `integral` A method that does not receive parameters in the call. When the method is activated, a new monomial object will be returned with the integral value of the monomial on which the function was applied $\left(\int x^{n} \ dx = \frac{x^{n+1}}{n+1} \right)$
   
 Important Rules: 
