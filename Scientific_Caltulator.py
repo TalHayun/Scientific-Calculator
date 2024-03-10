@@ -318,7 +318,7 @@ class PolynomialBST:
         else:
             return in_order_rec(self.head, [])
 
-    def __add__( self, other ):  # add another tree to the first - return new binary tree
+    def __add__( self, other ): # add another tree to the first - return new binary tree
         tree = PolynomialBST()
         for i in self.in_order():
             tree.insert(i)
